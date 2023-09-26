@@ -1,0 +1,234 @@
+<link rel="stylesheet" type="text/css" href="dashboard-control.component.css">
+<body>
+  <!-- Toolbar -->
+  <div class="toolbar" role="banner">
+    <a routerLink="/home">
+      <img
+        width="60"
+        alt="TigoLogo"
+        src="/assets/logo.png"
+      />
+    </a>
+    <span>Tigo CES</span>
+      <div class="spacer"></div>
+  </div>
+  
+  <div class="content" role="main">
+  <h2>DASHBOARD CONTROL</h2>
+  <div class="card-container">
+    <div class="card">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="brigadistas-tab" data-bs-toggle="tab" data-bs-target="#brigadistas" type="button" role="tab" aria-controls="brigadistas" aria-selected="true">Brigadistas</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="monitores-tab" data-bs-toggle="tab" data-bs-target="#monitores" type="button" role="tab" aria-controls="monitores" aria-selected="false">Monitores</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="comite-tab" data-bs-toggle="tab" data-bs-target="#comite" type="button" role="tab" aria-controls="comite" aria-selected="false">Comité</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pc-tab" data-bs-toggle="tab" data-bs-target="#pc" type="button" role="tab" aria-controls="pc" aria-selected="false">Personal Capacitado</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="brigadistas" role="tabpanel" aria-labelledby="brigadistas-tab">
+        <div class="container mt-5">
+          <form id="brigaForm">
+              <div class="row g-2">
+                  <div class="col-4">
+                      <div class="form-floating">
+                          <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                              <option value="nombreC">Nombre Colaborador</option>
+                              <option value="numC">Codigo de Colaborador</option>
+                          </select>
+                          <label for="floatingSelectGrid">Opción de Búsqueda:</label>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="form-floating">
+                          <input type="text" class="form-control" id="floatingInputGrid">
+                          <label for="floatingInputGrid">Colaborador a buscar:</label>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="d-flex justify-content-start">
+                          <button type="submit" class="btn btn-secondary btn-lg">Buscar</button>
+                      </div>
+                  </div>
+              </div>
+          </form>
+        </div>
+        <div class="container mt-5">
+          <table class="table table-hover table-custom" id="brigaTable">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Fecha Capacitación</th>
+                <th scope="col">Ubicación Física</th>
+                <th scope="col">Marcaje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Marce Melgar</th>
+                <td>58731821</td>
+                <td>03/05/23</td>
+                <td>T2</td>
+                <td>8:00am</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>     
+      </div>
+      <div class="tab-pane fade" id="monitores" role="tabpanel" aria-labelledby="monitores-tab">
+        <div class="container mt-5">
+          <form id="moniForm">
+              <div class="row g-2">
+                  <div class="col-4">
+                      <div class="form-floating">
+                          <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                              <option value="nombreC">Nombre Colaborador</option>
+                              <option value="numC">Codigo de Colaborador</option>
+                          </select>
+                          <label for="floatingSelectGrid">Opción de Búsqueda:</label>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="form-floating">
+                          <input type="text" class="form-control" id="floatingInputGrid">
+                          <label for="floatingInputGrid">Colaborador a buscar:</label>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="d-flex justify-content-start">
+                          <button type="submit" class="btn btn-secondary btn-lg">Buscar</button>
+                      </div>
+                  </div>
+              </div>
+          </form>
+        </div> 
+        <div class="container mt-5">
+          <table class="table table-hover table-custom" id="moniTable">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Ubicación Física</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Marce Melgar</th>
+                <td>58731821</td>
+                <td>T2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> 
+      </div>
+      <div class="tab-pane fade" id="comite" role="tabpanel" aria-labelledby="comite-tab">
+        <div class="container mt-5">
+          <form id="comiForm">
+              <div class="row g-2">
+                  <div class="col-4">
+                      <div class="form-floating">
+                          <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                              <option value="nombreC">Nombre Colaborador</option>
+                              <option value="numC">Codigo de Colaborador</option>
+                          </select>
+                          <label for="floatingSelectGrid">Opción de Búsqueda:</label>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="form-floating">
+                          <input type="text" class="form-control" id="floatingInputGrid">
+                          <label for="floatingInputGrid">Colaborador a buscar:</label>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="d-flex justify-content-start">
+                          <button type="submit" class="btn btn-secondary btn-lg">Buscar</button>
+                      </div>
+                  </div>
+              </div>
+          </form>
+        </div> 
+        <div class="container mt-5">
+          <table class="table table-hover table-custom" id="comiTable">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Grupo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Marce Melgar</th>
+                <td>58731821</td>
+                <td>grupo 1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> 
+      </div>
+      <div class="tab-pane fade" id="pc" role="tabpanel" aria-labelledby="pc-tab">
+        <div class="container mt-5">
+          <form id="pcForm">
+              <div class="row g-2">
+                  <div class="col-4">
+                      <div class="form-floating">
+                          <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                              <option value="nombreC">Nombre Colaborador</option>
+                              <option value="numC">Codigo de Colaborador</option>
+                          </select>
+                          <label for="floatingSelectGrid">Opción de Búsqueda:</label>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="form-floating">
+                          <input type="text" class="form-control" id="floatingInputGrid">
+                          <label for="floatingInputGrid">Colaborador a buscar:</label>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="d-flex justify-content-start">
+                          <button type="submit" class="btn btn-secondary btn-lg">Buscar</button>
+                      </div>
+                  </div>
+              </div>
+          </form>
+        </div> 
+        <div class="container mt-5">
+          <table class="table table-hover table-custom" id="pcTable">
+            <thead>
+              <tr>
+                <th scope="col">Empresa</th>
+                <th scope="col">Capacitación</th>
+                <th scope="col">Fecha Capacitación</th>
+                <th scope="col">Nombre Colaborador</th>
+                <th scope="col">Puesto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Tigo</th>
+                <td>Cap</td>
+                <td>18/09/23</td>
+                <td>Marce Melgar</td>
+                <td>IT Analyst</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> 
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+<script src="/src/assets/js/my-script.js"></script>
+
+</body>  
